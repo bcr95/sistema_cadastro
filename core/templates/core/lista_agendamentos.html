@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Agendamentos
+{% endblock %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 title">
+                    <h2>Agendamentos</h2>
+                </div>
+                <div class="col-6 link">
+                    <button class="btn btn-primary"><a href="{% url 'cadastro_agendamentos' %}">Novo Agendamento</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 lista">
+                    {% for agendamento in agendamentos %}
+                        <article>
+                            <p>Nome: {{agendamento.nome}}</p>
+                            <p>Data e Horário: {{agendamento.data_e_hora_agendamento}}</p>
+                            <p>Telefone: {{agendamento.telefone}}</p>
+                            <p>Diagnóstico: {{agendamento.diagnostico}}</p>
+                            <hr>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

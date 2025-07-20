@@ -1,0 +1,94 @@
+body, html {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin-left: 0;
+}
+
+h2, p {
+    text-align: left;
+}
+
+/* Menu */
+.menu {
+    padding: 0;
+    height: 100vh;
+    background-color: #b5b5b5;
+}
+
+.menu h2 {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.menu nav {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 0.5rem;
+}
+
+.menu a:hover {
+    width: 100%;
+    background-color: #808080;
+}
+/* ----------- */
+
+/* Conteúdo */
+.conteudo {
+    height: 100vh;
+}
+
+/* Main */
+main {
+    padding: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #81dbb8;
+}
+
+a:hover {
+    opacity: .85;
+}
+
+/* Formulário */
+.formulario {
+    padding: 1rem 1rem 1rem 0;
+}
+
+/* Título - Lista Agendamentos */
+.title {
+    padding-left: 0;
+}
+
+/* Link - Lista Agendamentos */
+.link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link a {
+    color: white;
+}
+
+/* Agendamentos */
+.lista {
+    padding-top: 1.6rem;
+    padding-left: 0;
+}
+
+.lista p {
+    margin: 0;
+}
