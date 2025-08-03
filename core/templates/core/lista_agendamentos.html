@@ -10,7 +10,7 @@
                     <h2>Agendamentos</h2>
                 </div>
                 <div class="col-6 link">
-                    <button class="btn btn-primary"><a href="{% url 'cadastro_agendamentos' %}">Novo Agendamento</a></button>
+                    <button class="btn btn-success"><a href="{% url 'cadastro_agendamentos' %}">Novo Agendamento</a></button>
                 </div>
             </div>
         </div>
@@ -23,6 +23,10 @@
                             <p>Data e Horário: {{agendamento.data_e_hora_agendamento}}</p>
                             <p>Telefone: {{agendamento.telefone}}</p>
                             <p>Diagnóstico: {{agendamento.diagnostico}}</p>
+                            <div class="botoes">
+                                <a href="{% url 'editar_agendamentos' agendamento.id %}"><button type="button" class="btn btn-success">Editar</button></a>
+                                <a href="{% url 'excluir_agendamentos' agendamento.id %}" onclick="return confirm('Tem certeza que deseja excluir?');"><button type="button" class="btn btn-danger excluir">Excluir</button></a>
+                            </div>
                             <hr>
                         </article>
                     {% endfor %}

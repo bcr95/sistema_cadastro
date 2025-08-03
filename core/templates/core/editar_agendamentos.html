@@ -1,28 +1,28 @@
 {% extends 'layout.html' %}
 {% block title %}
-    Novo Agendamento
+    Editar Agendamento
 {% endblock %}
 {% block content %}
-    <h2>Cadastrar Agendamento</h2>
-    <form action="{% url 'cadastro_agendamentos' %}" method="post" class="formulario">    
+    <h2>Editar Agendamento</h2>
+    <form action="{% url 'editar_agendamentos' agendamento.id %}" method="post" class="formulario">    
         {% csrf_token %}
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" name="nome">
+            <input type="text" class="form-control" name="nome" value="{{ agendamento.nome }}">
             </div>
             <div class="form-group col-md-6">
             <label for="data_e_hora">Data e Hora</label>
-            <input type="datetime-local" class="form-control" name="data_e_hora">
+            <input type="datetime-local" class="form-control" name="data_e_hora" value="{{ agendamento.data_e_hora }}">
             </div>
         </div>
         <div class="form-group">
             <label for="telefone">Telefone</label>
-            <input type="text" class="form-control" name="telefone">
+            <input type="text" class="form-control" name="telefone" value="{{ agendamento.telefone }}">
         </div>
         <div class="form-group">
             <label for="diagnostico">Diagnóstico</label>
-            <input type="text" class="form-control" name="diagnostico">
+            <input type="text" class="form-control" name="diagnostico" value="{{ agendamento.diagnostico }}">
         </div>
             <button type="submit" class="btn btn-success">Cadastrar</button>
         </form>
